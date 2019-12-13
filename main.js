@@ -37,10 +37,10 @@
       liTodoList.textContent = `${index + 1} : ${todo}`;
       ulTodoList.appendChild(liTodoList);
 
-      const dereteItemButton = document.createElement('button');
-      dereteItemButton.textContent = '削除';
-      dereteItemButton.addEventListener('click', (event) => {
-        dereteTodo(index);
+      const deleteItemButton = document.createElement('button');
+      deleteItemButton.textContent = '削除';
+      deleteItemButton.addEventListener('click', (event) => {
+        deleteTodo(index);
       });
       liTodoList.appendChild(dereteItemButton);
     });
@@ -50,7 +50,7 @@
   //   - todosから対応するtodo情報を削除する
   //   - 引数はindexを受け取る(インデックス番号)
   //   - 削除後はshowTodosを実行して、Todoリストを整理する
-  function dereteTodo(index) {
+  function deleteTodo(index) {
     todo.splice(index, 1);
     showTodos();
   }
